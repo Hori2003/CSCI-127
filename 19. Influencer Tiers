@@ -1,0 +1,19 @@
+mess = int(input('Enter amount of social media followers:'))
+
+
+if 0 < mess < 1000:
+    print("Your influencer tier is: Hyper Influencer")
+elif 1000 <= mess < 10000:
+    print("Your influencer tier is: Nano Influencer")
+elif 10000 <= mess < 100000:
+    print("Your influencer tier is: Micro Influencer")
+elif 100000 <= mess < 500000:
+    print("Your influencer tier is: Mid-Tier Influencer")
+elif 500000 <= mess < 1000000:
+    print("Your influencer tier is: Macro-Influencer")
+elif mess > 1000000:
+    print("Your influencer tier is: Celebrity Influencer")
+elif mess < 0:
+    print("Your influencer tier is: Error")
+else:
+    print("Your influencer tier is: Error")
