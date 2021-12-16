@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+mess = input('Enter name of input file : ')
+mess1 = input('Enter name of output file : ')
+
+superbowl = pd.read_csv(mess)
+superbowl["Date"] = pd.to_datetime(superbowl["Date"].apply(str))	
+
+
+superbowl['% Points'] = (superbowl['Winner Pts']/(superbowl['Winner Pts'] + superbowl['Loser Pts']))*100
+superbowl.plot(x = "Date", y = "% Points")
+
+fig = plt.gcf()
+fig.savefig(mess1)
+
+plt.show()
