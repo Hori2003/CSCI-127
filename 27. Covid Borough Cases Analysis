@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+
+import pandas as pd
+
+covidCases = pd.read_csv('covidCases.csv')
+mess = str(input('Enter borough name: '))
+mess2 = str(input('Enter output name: '))
+
+
+print("Min: ", covidCases[mess].min())
+print("Max: ", covidCases[mess].max())
+print("Mean: ", covidCases[mess].mean())
+print("Median: ", covidCases[mess].median())
+print("Standard Deviation: ", covidCases[mess].std())
+covidCases["Fraction"] = covidCases[mess]/covidCases["Case Count"]
+
+covidCases.plot(x = "Date of Interest", y = "Fraction")
+
+fig = plt.gcf()
+fig.savefig(mess2)
