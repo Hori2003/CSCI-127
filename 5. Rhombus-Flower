@@ -1,0 +1,22 @@
+import turtle
+wn = turtle.Screen()             
+wn.bgcolor("khaki")
+
+tess = turtle.Turtle()
+tess.shape("turtle")
+tess.pencolor("black")
+tess.fillcolor("green")
+tess.pensize(3)
+
+
+for i in range(6):
+    tess.forward(100)
+    tess.left(45)
+    tess.forward(100)
+    tess.left(135)
+    tess.stamp()
+    tess.forward(100)
+    tess.left(45)
+    tess.forward(100)
+    tess.left(75)
+    
