@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+mess = input('Enter name of input file : ')
+mess1 = input('Enter name of output file : ')
+
+
+UFO = pd.read_csv(mess)
+group_data = UFO.groupby('state')['duration (seconds)'].mean().sort_values(ascending=False)[:10]
+group_data.plot.bar()
+
+
+plt.xlabel('State')
+plt.ylabel('Seconds')
+
+fig = plt.gcf()
+fig.savefig(mess1)
+
+plt.show()
