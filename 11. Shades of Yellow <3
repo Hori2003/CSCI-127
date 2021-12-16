@@ -1,0 +1,26 @@
+import turtle				
+
+turtle.colormode(255)		
+tess = turtle.Turtle()		
+tess.shape("turtle")		
+tess.left(60)
+
+for i in range(0,255,10):
+     tess.forward(10)
+     tess.pensize(i)		
+     tess.color(i,i,0)
+
+tess.penup()		
+tess.left(180)
+tess.forward(260)
+tess.pendown()
+tess.pensize(0)
+tess.color(0,0,0)
+tess.left(240)
+
+
+
+for i in range(0,255,10):
+     tess.forward(10)
+     tess.pensize(i)
+     tess.color(i,i,0)
