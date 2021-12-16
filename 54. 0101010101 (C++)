@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+  int i;   //The index variable for the loop
+
+  //Loop will repeat 10 times:
+  for (i = 0; i < 5; i++)
+  {
+    cout << 0101010101\n";
+  }
+  return 0;
+}
