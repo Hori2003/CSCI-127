@@ -1,0 +1,14 @@
+mess = input('Enter a list of books and their authors: ')
+print(mess)
+
+mess = mess.split("; ")
+
+
+for word in mess:
+    title = word.split(" - ")
+    name = title[1].split(" ")
+    firstName = name[0]
+    lastName = name[1]
+    firstName = firstName[0]
+    lastName = lastName[0]
+    print(title[0],"by",firstName+"."+lastName+".")
