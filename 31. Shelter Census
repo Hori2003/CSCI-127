@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+mess = input('Enter name of input file : ')
+mess1 = input('Enter name of output file : ')
+
+homeless = pd.read_csv(mess)
+homeless['Fraction Single Adults'] = homeless['Total Single Adults in Shelter']/homeless['Total Individuals in Shelter']
+homeless.plot(x = "Date of Census", y = "Fraction Single Adults")
+
+fig = plt.gcf()
+fig.savefig(mess1)
+
+plt.show()
