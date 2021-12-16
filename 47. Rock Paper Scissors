@@ -1,0 +1,27 @@
+import random
+
+global winner 
+rps = int(input('enter 1 for rock, 2 for paper, or 3 for scissors:'))
+
+while rps >0 :
+    ComputerMove = random.randint(1,3)
+    if rps > 3:
+          winner = 'invalid'
+    elif rps == ComputerMove:
+          winner = 'draw'
+    elif rps == 1 and ComputerMove == 2:
+          winner = 'human'  
+    elif rps == 1 and ComputerMove == 3:
+          winner = 'computer'
+    elif rps == 2 and ComputerMove == 1:
+          winner = 'human'
+    elif rps == 2 and ComputerMove == 3:
+          winner = 'computer'
+    elif rps == 3 and ComputerMove == 1:
+          winner = 'computer'
+    elif rps == 3 and ComputerMove == 2:
+          winner = 'human'
+    print('ComputerMove:', ComputerMove)
+    print('round finished and winner is:',winner)
+    rps = int(input('enter 1 for rock, 2 for paper, or 3 for scissors:'))
+print('game finished and winner is: computer')
