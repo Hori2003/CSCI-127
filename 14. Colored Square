@@ -1,0 +1,11 @@
+mess = input('Please enter a 6-digit Hexadecimal number: ')
+
+import turtle
+tess = turtle.Turtle()
+tess.shape("turtle")
+tess.color('#'+mess)
+
+for i in range(4):
+    tess.left(90)
+    tess.forward(100)
+    tess.stamp()
