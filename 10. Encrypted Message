@@ -1,0 +1,13 @@
+mess = input('Enter a message: ')
+print(mess)
+
+codedWord = ""
+
+for ch in mess:
+    offset = ord(ch) - ord('A') + 13
+    wrap = offset % 26
+    newChar = chr(ord('A') + wrap)
+    print(wrap, chr(ord('A') + wrap))
+    codedWord = codedWord + newChar
+
+print("Your word in code is", codedWord)
