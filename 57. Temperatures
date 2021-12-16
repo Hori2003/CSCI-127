@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int temperature;
+  cout << "Enter the temperature: ";
+  cin >> temperature;
+  if (temperature <= 32)
+  {
+    cout << "It's freezing!"<<endl;
+  }
+  else if( temperature < 68)
+  {
+    cout << "It's cold!"<<endl;
+  }
+  else if( temperature < 73)
+  {
+    cout << "It's warm!"<<endl;
+  }
+  else if( temperature >= 73)
+  {
+    cout << "It's hot!"<<endl;
+  }
+  return 0;
+}
