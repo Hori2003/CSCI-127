@@ -1,0 +1,6 @@
+git clone https://github.com/HunterCSci127/CSci127
+cd CSci127
+mkdir myprojectfiles
+mv nestingPolygons.py myprojectfiles
+mkdir pictures
+mv *.png pictures
