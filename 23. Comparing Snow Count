@@ -1,0 +1,37 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+mess = input('Enter first image file name: ')
+mess2 = input('Enter second image file: ')
+num = float(input('Enter threshold of white pixels: '))
+
+
+countSnow1 = 0
+
+mess1 = plt.imread(mess)
+mess3 = plt.imread(mess2)
+
+for i in range(mess1.shape[0]):
+     for j in range(mess1.shape[1]):
+          if (mess1[i,j,0] > num) and (mess1[i,j,1] > num) and (mess1[i,j,2] > num):
+               countSnow1 = countSnow1 + 1
+
+print("Snow count of first image: ", countSnow1)
+
+countSnow2 = 0
+
+for i in range(mess3.shape[0]):
+     for j in range(mess3.shape[1]):
+          if (mess3[i,j,0] > num) and (mess3[i,j,1] > num) and (mess3[i,j,2] > num):
+               countSnow2 = countSnow2 + 1
+
+print("Snow count of second image: ", countSnow2)
+
+if countSnow1 > countSnow2:
+    diff = countSnow1  - countSnow2
+
+else:
+    diff = countSnow2 - countSnow1 
+
+print('Difference between first and second image: ', diff)
