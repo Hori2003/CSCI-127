@@ -1,0 +1,12 @@
+mkdir csci127
+cd csci127
+mkdir images
+mkdir files
+cd images
+mkdir png
+mkdir jpg
+mkdir gif
+cd ../files
+mkdir csv
+mkdir txt
+ls
