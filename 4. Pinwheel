@@ -1,0 +1,44 @@
+
+import turtle
+
+tess = turtle.Turtle()           
+tess.shape("arrow")
+tess.color("purple")
+tess.pensize(3)
+
+tess.forward(30)
+
+for i in range(3):
+    tess.forward(50)
+    tess.right(120)
+
+
+tess.backward(30)
+tess.right(90)
+tess.forward(30)
+
+for i in range(3):
+    tess.forward(50)
+    tess.right(120)
+
+
+tess.backward(30)
+tess.right(90)
+tess.forward(30)
+
+for i in range(3):
+    tess.forward(50)
+    tess.right(120)
+
+
+tess.backward(30)
+tess.right(90)
+tess.forward(30)
+
+for i in range(3):
+    tess.forward(50)
+    tess.right(120)
+
+tess.backward(30)
+
+
