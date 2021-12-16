@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+num = int(input('Enter the size:'))
+
+
+mess = input('Enter output file: ')
+
+img = np.ones((num,num,3))
+
+img[1::2,:,0] = .94
+img[1::2,:,1] = .90
+img[1::2,:,2] = .55
+img[:,1::2,0] = .73
+img[:,1::2,1] = .56
+img[:,1::2,2] = .56
+
+plt.imshow(img)
+plt.show()
+
+plt.imsave(mess, img)
