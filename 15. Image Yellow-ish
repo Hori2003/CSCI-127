@@ -1,0 +1,16 @@
+mess = input('Enter name of the input file: ')
+
+mess2 = input('Enter name of the output file: ')
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+img = plt.imread(mess)   
+                      
+
+img2 = img.copy()                  
+img2[:,:,2] = 0          
+              
+
+plt.imsave(mess2, img2)  
