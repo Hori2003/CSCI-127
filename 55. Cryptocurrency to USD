@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+  float dollar;
+  float b, e, d;
+  cout << "Enter amount in cryptocurrency: ";
+  cin >> dollar;
+  b = dollar*31901.19;
+  e = dollar*1901.54;
+  d= dollar*0.179733;
+  cout << fixed << setprecision(2);
+  cout<< dollar <<"BTC in USD: $"<< b <<endl;
+  cout<< dollar <<"ETH in USD: $"<< e <<endl;
+  cout<< dollar <<"DOGE in USD: $"<< d <<endl;
+  return 0;
+}
