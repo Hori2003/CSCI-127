@@ -1,0 +1,16 @@
+print("Please enter the conversion you want to do: ")
+print(" 'a' for Light-Year to Parsec conversion ")
+print(" 'b' for Parsec to Light-Year conversion ")
+selection = input(" Your selection: ")
+
+if selection == 'a':
+    light_year = float(input("Please enter a number of Light Years: "))
+    light_year1 = light_year
+    light_year = 0.306601*light_year
+    print(light_year1, "Light-Years is equal to", light_year, "Parsecs.")
+
+elif selection == 'b':
+    parsec = float(input("Please enter a number of Parsecs: "))
+    parsec1 = parsec
+    parsec = 3.26156*parsec
+    print(parsec1, "Parsecs is equal to", parsec, "Light-Years.")
