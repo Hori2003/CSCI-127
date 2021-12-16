@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+  int number;
+  string word;
+  cout << "Please enter a number:\n ";
+  cout << "Please type a word:\n ";
+  cin >> number;
+  cin >> word;
+  int i;   
+  for (i = number; i > 0; i--)
+  {
+    cout << i << " "<<endl;
+  }
+  cout << "Time for " <<word<<"!";
+  return 0;
+}
