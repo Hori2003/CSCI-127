@@ -1,0 +1,12 @@
+phrase = input('Enter a phrase: ')
+
+print( "Reversed phrase:",phrase[::-1])
+print( "Last letters of reversed words:")
+
+phrase = phrase[::-1]
+phrase = phrase.upper()
+
+phrase = phrase.split()
+
+for word in phrase:
+    print(word[-1], end = '')
