@@ -1,0 +1,6 @@
+ADDI $s0, $zero, 100
+ADDI $s1, $zero, 25  
+AGAIN: SUB $s0, $s0, $s1
+BEQ $s0, $zero, DONE
+J AGAIN
+DONE:
