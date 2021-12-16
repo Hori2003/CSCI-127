@@ -1,0 +1,17 @@
+import folium
+import pandas as pd
+
+mess = input('Please enter the name of the input file: ')
+mess1 = input('Please enter the name of the output file : ')
+mess2= input('Please enter the name of the borough: ')
+NYC = pd.read_csv(mess)
+hotspot = NYC.groupby('City').get_group(mess2)
+
+
+wifi = folium.Map(location=[40.75, -74.125])
+for index,row in hotspot.iterrows():
+    lat = row["Latitude"]
+    lon = row["Longitude"]
+    name = row['Name']
+    folium.Marker([lat, lon], popup=name).add_to(wifi)
+wifi.save(outfile=mess1)
