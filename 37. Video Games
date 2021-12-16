@@ -1,0 +1,13 @@
+import pandas as pd
+
+mess = input('Enter file name: ')
+
+
+videogames = pd.read_csv(mess)
+
+print( "There are", videogames["Rank"].count(), "total games")
+print( "The number of games in each genre is")
+videogames1 = videogames.groupby('Genre')
+print(videogames1["Rank"].count())
+print("The top 3 game publishers are")
+print(videogames["Publisher"].value_counts()[:3])
