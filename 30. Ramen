@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+mess = input('Enter file name: ')
+ramen = pd.read_csv(mess)
+ramen["Stars"] = pd.to_numeric(ramen["Stars"], downcast="float")
+
+groupedData = ramen.groupby('Style')
+print(groupedData['Stars'].mean())
+
+ramen1 = ramen.groupby('Country').get_group('Singapore')['Stars']
+print(ramen['Brand'][ramen1.idxmin(axis = 0)] , "has the lowest rating in Singapore with", ramen1.min(), "stars")
