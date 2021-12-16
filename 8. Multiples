@@ -1,0 +1,2 @@
+for i in range(2,21,2):
+    print("current value:", i, '|', "value+10:", i+10)
