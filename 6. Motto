@@ -1,0 +1,7 @@
+
+mess = input('Enter a message: ')
+letter = input('Enter a letter: ')
+print(mess)
+print(mess.upper())
+print(mess.lower())
+print(mess.count(letter))
