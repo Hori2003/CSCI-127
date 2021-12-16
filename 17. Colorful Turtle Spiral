@@ -1,0 +1,33 @@
+mess = int(input(' Enter number of stamps the turtle will print: '))
+
+import turtle
+
+turtle.colormode(255)
+
+tess = turtle.Turtle()
+
+tess.shape("circle")
+
+tess.penup()
+
+steps = 10
+
+red = 186
+
+green = 164
+
+blue = 145
+
+tess.color(red, green, blue)
+
+for i in range(mess):
+    tess.stamp()
+    steps = steps+2
+    if (red+3 <= 255) and (green+3 <= 255) and (blue+3 <= 255):
+        red = red+3
+        green = green+3
+        blue = blue+3
+    tess.color(red, green, blue)
+    tess.forward(steps)
+    tess.right(24)
+    
