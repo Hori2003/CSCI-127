@@ -1,0 +1,14 @@
+import folium
+import pandas as pd
+
+mess = input('Enter CSV file name: ')
+mess1 = input('Enter output file : ')
+
+attractions = pd.read_csv(mess)
+mapmap = folium.Map(location=[40.761, -73.915],tiles="Cartodb Positron")
+for index,row in attractions.iterrows():
+    lat = row["LATITUDE"]
+    lon = row["LONGITUDE"]
+    name = row["NAME"]
+    folium.Marker([lon, lat], popup=name).add_to(mapmap)
+mapmap.save(outfile=mess1)
